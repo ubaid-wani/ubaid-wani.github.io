@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ubaid-wani.github.io/static/css/main.f21ecf47.css",
+    "main.js": "/ubaid-wani.github.io/static/js/main.5217499b.js",
+    "static/media/realestate.jpg": "/ubaid-wani.github.io/static/media/realestate.44fd19f4c6872731149c.jpg",
+    "static/media/portfolio.jpg": "/ubaid-wani.github.io/static/media/portfolio.f6cfdeb865f4a57e0463.jpg",
+    "static/media/logo2.png": "/ubaid-wani.github.io/static/media/logo2.4a7a8d47c224e6f72d65.png",
+    "static/media/weatherapp.jpg": "/ubaid-wani.github.io/static/media/weatherapp.2966175bee80f4fe9c3c.jpg",
+    "static/media/workImg.jpeg": "/ubaid-wani.github.io/static/media/workImg.e4c66be6ae2ae4f83608.jpeg",
+    "static/media/cryptotracker.jpg": "/ubaid-wani.github.io/static/media/cryptotracker.2c2fef774498a76d266c.jpg",
+    "static/media/todoapp.jpg": "/ubaid-wani.github.io/static/media/todoapp.01e1a9827850a7153df0.jpg",
+    "static/media/react.png": "/ubaid-wani.github.io/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/github.png": "/ubaid-wani.github.io/static/media/github.3b9e32903aa89111875d.png",
+    "static/media/html.png": "/ubaid-wani.github.io/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/tailwind.png": "/ubaid-wani.github.io/static/media/tailwind.e47ac876b8d4d0bba47a.png",
+    "static/media/css.png": "/ubaid-wani.github.io/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/javascript.png": "/ubaid-wani.github.io/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/ubaid-wani.github.io/index.html",
+    "main.f21ecf47.css.map": "/ubaid-wani.github.io/static/css/main.f21ecf47.css.map",
+    "main.5217499b.js.map": "/ubaid-wani.github.io/static/js/main.5217499b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f21ecf47.css",
+    "static/js/main.5217499b.js"
+  ]
+}
