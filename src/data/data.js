@@ -10,14 +10,14 @@ export const data=[
         name:"React-Crypto-Tracker",
         image:cryptotracker,
         github:"",
-        live:"https://ubaid-wani.github.io/React-crypto-tracker/",
+        live:"https://ubaid-wani.github.io/cryptotracker-react/",
     },
     {
         id:2,
         name:"React-TodoApp",
         image:todoapp,
         github:"",
-        live:"https://ubaid-wani.github.io/Todo-app-react/",
+        live:"https://ubaid-wani.github.io/todoapp-react/",
     },
     {
         id:3,
