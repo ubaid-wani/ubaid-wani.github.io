@@ -92,40 +92,40 @@ import { Link } from 'react-scroll';
           </Link>
         </li>
       </ul>
-
+         
       {/* Social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+      <div className=' hidden flex fixed flex-col top-[35%] left-0'>
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+          <li className='w-[150px] h-[50px] md:w-[160px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href="https://www.linkedin.com/in/ubaidwani1/"
             >
-              Linkedin <FaLinkedin size={30} />
+              Linkedin <FaLinkedin size={20} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+          <li className='w-[150px] h-[50px] md:w-[160px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://github.com/ubaid-wani'
             >
-              Github <FaGithub size={30} />
+              Github <FaGithub size={20} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+          <li className='w-[150px] h-[50px] md:w-[160px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href="mailto:ubaidwani133@gmail.com"
             >
-              Email <HiOutlineMail size={30} />
+              Email <HiOutlineMail size={20} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+          <li className='w-[150px] h-[50px] md:w-[160px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='ubaid.pdf' download='ubaid.pdf'
             >
-              Resume <BsFillPersonLinesFill size={30} />
+              Resume <BsFillPersonLinesFill size={0} />
             </a>
           </li>
         </ul>
