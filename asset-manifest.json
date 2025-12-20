@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55304f67.css",
-    "main.js": "/static/js/main.63e5a02c.js",
+    "main.js": "/static/js/main.79535456.js",
     "static/js/453.5017dcd4.chunk.js": "/static/js/453.5017dcd4.chunk.js",
     "static/media/img1.jpg": "/static/media/img1.86c66569a3e124d88c5b.jpg",
     "static/media/img3.png": "/static/media/img3.cc88592af8d4f8739064.png",
@@ -10,7 +10,7 @@
     "static/media/img4.png": "/static/media/img4.1a9585e458d55bb250c3.png",
     "static/media/logo_bold.png": "/static/media/logo_bold.6f3fe2442f1ec95b8736.png",
     "static/media/dp.jpeg": "/static/media/dp.72030383b54789b70332.jpeg",
-    "static/media/avatar.svg": "/static/media/avatar.5852f40fbb38aa284829fa3fb7722225.svg",
+    "static/media/About.svg": "/static/media/About.10bf62a19d8a2f8ced115c34083d09ac.svg",
     "static/media/elysia.svg": "/static/media/elysia.995c497b86359354159487711e23560b.svg",
     "static/media/Docker.svg": "/static/media/Docker.e66b6dcb6f3f435cf76e5ad948b9bff7.svg",
     "static/media/netlify-svgrepo-com.svg": "/static/media/netlify-svgrepo-com.16fa7138d5f04b33e5353a2321fa5e6d.svg",
@@ -34,11 +34,11 @@
     "static/media/MUI.svg": "/static/media/MUI.4cc8e67288fab7f3ae7b7d8449ec35d7.svg",
     "static/media/Firebase.svg": "/static/media/Firebase.de3da3a4068963dd30fc0f885f170428.svg",
     "main.55304f67.css.map": "/static/css/main.55304f67.css.map",
-    "main.63e5a02c.js.map": "/static/js/main.63e5a02c.js.map",
+    "main.79535456.js.map": "/static/js/main.79535456.js.map",
     "453.5017dcd4.chunk.js.map": "/static/js/453.5017dcd4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.55304f67.css",
-    "static/js/main.63e5a02c.js"
+    "static/js/main.79535456.js"
   ]
 }
