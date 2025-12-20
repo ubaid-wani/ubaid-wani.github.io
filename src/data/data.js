@@ -1,7 +1,7 @@
 import img1 from '../Assets/Projects/img1.jpg'
 import img2 from '../Assets/Projects/img2.jpg'
 import img3 from '../Assets/Projects/img3.png'
-import cal from '../Assets/Projects/cal.png'
+// import cal from '../Assets/Projects/cal.png'
 import img4 from "../Assets/Projects/img4.png"
 import iblaag from "../Assets/Projects/iblaag1.png"
 
