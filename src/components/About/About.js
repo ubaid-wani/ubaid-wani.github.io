@@ -3,7 +3,7 @@ import Particle from "../Particle";
 // import Github from "../Skills/Github";
 // import Techstack from "../Skills/Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/About.svg";
+// import laptopImg from "../../Assets/About.svg";
 // import Toolstack from "../Skills/Toolstack";
 
 const About = () => {
@@ -28,27 +28,14 @@ const About = () => {
                 </h1>
                 <Aboutcard />
               </Col>
-              <Col
+              {/* <Col
                 md={5}
                 style={{ paddingTop: "120px", paddingBottom: "50px" }}
                 className="about-img"
               >
                 <img src={laptopImg} alt="about" className="img-fluid" />
-              </Col>
+              </Col> */}
             </Row>
-            {/* <div id="skills">
-              <h1 className="project-heading">
-                Professional <strong className="purple">Skillset </strong>
-              </h1>
-              <Techstack />
-              <h1 className="project-heading">
-                <strong className="purple">Tools</strong> I use
-              </h1>
-              <Toolstack />
-
-            </div> */}
-
-            {/* <Github /> */}
           </Container>
         </Container>
       </section>
