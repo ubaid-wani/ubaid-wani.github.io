@@ -1,8 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-// import myImg from "../../Assets/avatar.svg";
-// import Tilt from "react-parallax-tilt";
 
-const Home2 = () => {
+const Intro = () => {
 	return (
 		<Container fluid className="home-about-section" id="about">
 			<Container>
@@ -12,7 +10,7 @@ const Home2 = () => {
 							LET ME <span className="blue"> INTRODUCE </span> MYSELF
 						</h1>
 
-						<p className="home-about-body">
+						<p className="home-about-body" style={{ textAlign: "justify" }}>
 							I’m a passionate{" "}
 							<i>
 								<b className="blue">Software Engineer with 2.5 years of experience</b>
@@ -63,4 +61,4 @@ const Home2 = () => {
 	);
 };
 
-export default Home2;
+export default Intro;

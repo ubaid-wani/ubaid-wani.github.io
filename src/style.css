@@ -265,16 +265,16 @@ button:focus {
 /* Home section */
 /* --------- */
 
-.dp-wrapper {
+/* .dp-wrapper {
   position: relative;
   display: inline-block;
   padding: 10px;
   border-radius: 50%;
   overflow: visible;
-}
+} */
 
 /* Glowing animated circular border */
-.dp-wrapper::before {
+/* .dp-wrapper::before {
   content: "";
   position: absolute;
   inset: -6px;
@@ -288,7 +288,7 @@ button:focus {
   background-size: 300% 300%;
   animation: glowing 4s linear infinite;
   filter: blur(12px);
-}
+} */
 
 @keyframes glowing {
   0% {

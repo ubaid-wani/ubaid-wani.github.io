@@ -22,7 +22,6 @@ const AboutCard = () => {
             <br />
             Outside of coding, I enjoy activities that keep me active and entertained:
           </p>
-
           <ul>
             <li className="about-activity">
               <ImPointRight /> Playing Video Games

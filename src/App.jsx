@@ -1,7 +1,6 @@
 import React from "react";
 import Preloader from "./components/Pre";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
@@ -11,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Contacts from "./components/contact/Contacts";
 import Skills from "./components/Skills/Skills";
 import Particles from "react-tsparticles";
+import Hero from "./components/Home/Hero";
+import Intro from "./components/Home/Intro";
 
 const App = () => {
   const [load, updateLoad] = React.useState(true);
@@ -30,7 +31,8 @@ const App = () => {
         <Navbar />
         <div>
           <Particles />
-          <Home />
+          <Hero />
+          <Intro />
           <About />
           <Skills />
           <Projects />

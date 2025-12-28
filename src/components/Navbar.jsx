@@ -17,7 +17,10 @@ const NavBar = () => {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  React.useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   return (
     <Navbar
@@ -43,7 +46,13 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="home" style={{ cursor: "pointer" }} onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="home"
+                smooth={true}
+                duration={500}
+                onClick={() => updateExpanded(false)}
+              >
                 Home
               </Nav.Link>
             </Nav.Item>
@@ -51,7 +60,8 @@ const NavBar = () => {
               <Nav.Link
                 as={Link}
                 to="about"
-                style={{ cursor: "pointer" }}
+                smooth={true}
+                duration={500}
                 onClick={() => updateExpanded(false)}
               >
                 About
@@ -61,7 +71,8 @@ const NavBar = () => {
               <Nav.Link
                 as={Link}
                 to="skills"
-                style={{ cursor: "pointer" }}
+                smooth={true}
+                duration={500}
                 onClick={() => updateExpanded(false)}
               >
                 Skills
@@ -71,18 +82,19 @@ const NavBar = () => {
               <Nav.Link
                 as={Link}
                 to="project"
-                style={{ cursor: "pointer" }}
+                smooth={true}
+                duration={500}
                 onClick={() => updateExpanded(false)}
               >
                 Work
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="contact"
-                style={{ cursor: "pointer" }}
+                smooth={true}
+                duration={500}
                 onClick={() => updateExpanded(false)}
               >
                 Contact
@@ -93,6 +105,96 @@ const NavBar = () => {
       </Container>
     </Navbar>
   );
-}
+};
+
+// const NavBar = () => {
+//   const [expand, updateExpanded] = React.useState(false);
+//   const [navColour, updateNavbar] = React.useState(false);
+
+//   function scrollHandler() {
+//     if (window.scrollY >= 20) {
+//       updateNavbar(true);
+//     } else {
+//       updateNavbar(false);
+//     }
+//   }
+
+//   window.addEventListener("scroll", scrollHandler);
+
+//   return (
+//     <Navbar
+//       expanded={expand}
+//       fixed="top"
+//       expand="md"
+//       className={navColour ? "sticky" : "navbar"}
+//     >
+//       <Container>
+//         <Navbar.Brand href="/" className="d-flex">
+//           <img src={logo} className="img-fluid logo" alt="brand" />
+//         </Navbar.Brand>
+//         <Navbar.Toggle
+//           aria-controls="responsive-navbar-nav"
+//           onClick={() => {
+//             updateExpanded(expand ? false : "expanded");
+//           }}
+//         >
+//           <span></span>
+//           <span></span>
+//           <span></span>
+//         </Navbar.Toggle>
+//         <Navbar.Collapse id="responsive-navbar-nav">
+//           <Nav className="ms-auto" defaultActiveKey="#home">
+//             <Nav.Item>
+//               <Nav.Link as={Link} to="home" style={{ cursor: "pointer" }} onClick={() => updateExpanded(false)}>
+//                 Home
+//               </Nav.Link>
+//             </Nav.Item>
+//             <Nav.Item>
+//               <Nav.Link
+//                 as={Link}
+//                 to="about"
+//                 style={{ cursor: "pointer" }}
+//                 onClick={() => updateExpanded(false)}
+//               >
+//                 About
+//               </Nav.Link>
+//             </Nav.Item>
+//             <Nav.Item>
+//               <Nav.Link
+//                 as={Link}
+//                 to="skills"
+//                 style={{ cursor: "pointer" }}
+//                 onClick={() => updateExpanded(false)}
+//               >
+//                 Skills
+//               </Nav.Link>
+//             </Nav.Item>
+//             <Nav.Item>
+//               <Nav.Link
+//                 as={Link}
+//                 to="project"
+//                 style={{ cursor: "pointer" }}
+//                 onClick={() => updateExpanded(false)}
+//               >
+//                 Work
+//               </Nav.Link>
+//             </Nav.Item>
+
+//             <Nav.Item>
+//               <Nav.Link
+//                 as={Link}
+//                 to="contact"
+//                 style={{ cursor: "pointer" }}
+//                 onClick={() => updateExpanded(false)}
+//               >
+//                 Contact
+//               </Nav.Link>
+//             </Nav.Item>
+//           </Nav>
+//         </Navbar.Collapse>
+//       </Container>
+//     </Navbar>
+//   );
+// }
 
 export default NavBar;

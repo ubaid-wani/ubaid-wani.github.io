@@ -2,6 +2,14 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
 
+@theme {
+  --color-heading: #0FA3B1;        /* For headings and titles */
+  --color-subheading: #05668D;     /* For subheadings */
+  --color-highlight: #00C2CB;      /* For highlights and accents */
+  --color-canvas: #001F24;         /* Main canvas/background */
+  --color-canvas-deep: #001018;    /* Deeper canvas areas */
+}
+
 body {
   margin: 0;
   font-family: "PT Mono", monospace !important;
@@ -10,3 +18,4 @@ body {
   background-image: linear-gradient(to left, rgb(15, 15, 15), rgb(0, 0, 0));
 
 }
+
