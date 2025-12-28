@@ -1,11 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  // AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { socialLinks } from "../data/data";
+import { Flex, Span } from "./general/BaseComponents";
+import { FaHeart } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -14,7 +15,11 @@ function Footer() {
     <Container fluid className="footer z-3">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Ubaid Ashraf Wani</h3>
+          <Flex className="text-white gap-1 justify-center">
+            <Span>Crafted with</Span>
+            <FaHeart className="text-heading" />
+            <Span>by Ubaid Ashraf Wani</Span>
+          </Flex>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} UW</h3>
@@ -31,16 +36,6 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            {/* <li className="social-icons">
-              <a
-                href=""
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li> */}
             <li className="social-icons">
               <a
                 href={socialLinks.linkedin}

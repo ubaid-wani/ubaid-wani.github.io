@@ -1,63 +1,26 @@
 import { Container, Row, Col } from "react-bootstrap";
 import {
     AiFillGithub,
-    // AiOutlineTwitter,
     AiFillInstagram
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { socialLinks } from "../../data/data";
+import SocialIcon from "../Icons/SocialIcon";
 
 const Contacts = () => {
     return (
         <section id="contact">
             <Container>
                 <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
-                    <Col md={12} className="home-about-social">
+                    <Col md={12} className="text-white">
                         <h1>Find Me On</h1>
                         <p>
-                            Feel free to <span className="purple">connect </span>with me
+                            Feel free to <span className="text-heading">connect </span>with me
                         </p>
-                        <ul className="home-about-social-links">
-                            <li className="social-icons">
-                                <a
-                                    href={socialLinks.github}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="icon-colour  home-social-icons"
-                                >
-                                    <AiFillGithub />
-                                </a>
-                            </li>
-                            {/* <li className="social-icons">
-                                <a
-                                    href=""
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="icon-colour  home-social-icons"
-                                >
-                                    <AiOutlineTwitter />
-                                </a>
-                            </li> */}
-                            <li className="social-icons">
-                                <a
-                                    href={socialLinks.linkedin}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="icon-colour  home-social-icons"
-                                >
-                                    <FaLinkedinIn />
-                                </a>
-                            </li>
-                            <li className="social-icons">
-                                <a
-                                    href={socialLinks.instagram}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="icon-colour home-social-icons"
-                                >
-                                    <AiFillInstagram />
-                                </a>
-                            </li>
+                        <ul className="flex justify-center items-center gap-8 list-none p-0">
+                            <SocialIcon href={socialLinks.github} icon={AiFillGithub} />
+                            <SocialIcon href={socialLinks.linkedin} icon={FaLinkedinIn} />
+                            <SocialIcon href={socialLinks.instagram} icon={AiFillInstagram} />
                         </ul>
                     </Col>
                 </Row>
