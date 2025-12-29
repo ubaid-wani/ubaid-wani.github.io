@@ -12,6 +12,7 @@ import Skills from "./components/Skills/Skills";
 import Particles from "react-tsparticles";
 import Hero from "./components/Home/Hero";
 import Intro from "./components/Home/Intro";
+import { Div } from "./components/general/BaseComponents";
 
 const App = () => {
   const [load, updateLoad] = React.useState(true);
@@ -27,19 +28,17 @@ const App = () => {
   return (
     <>
       <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <Div className="App overflow-x-hidden max-w-full" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
-        <div>
-          <Particles />
-          <Hero />
-          <Intro />
-          <About />
-          <Skills />
-          <Projects />
-          <Contacts />
-        </div>
+        <Particles />
+        <Hero />
+        <Intro />
+        <About />
+        <Skills />
+        <Projects />
+        <Contacts />
         <Footer />
-      </div>
+      </Div>
     </>
   );
 }
