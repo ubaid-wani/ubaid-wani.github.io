@@ -1,21 +1,94 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
+/* ===============================
+   IMPORTS — MUST BE FIRST
+================================ */
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Space+Grotesk:wght@400;600;700&family=PT+Mono&display=swap");
 
+/* ===============================
+   TAILWIND V4 THEME TOKENS
+================================ */
 @theme {
-  --color-heading: #0FA3B1;        /* For headings and titles */
-  --color-subheading: #05668D;     /* For subheadings */
-  --color-highlight: #00C2CB;      /* For highlights and accents */
-  --color-canvas: #001F24;         /* Main canvas/background */
-  --color-canvas-deep: #001018;    /* Deeper canvas areas */
+  /* Backgrounds */
+  --color-bg-main: #0b0d0f;
+  --color-bg-deep: #060708;
+  --color-bg-panel: #111317;
+
+  /* Neon */
+  --color-primary-text: #b6ff00;
+  --color-neon-400: #9ee800;
+  --color-neon-300: #84cc16;
+
+  /* Text */
+  --color-text-main: #ffffff;
+  --color-text-muted: #9ca3af;
+
+  /* Grid */
+  --color-grid-line: rgba(255, 255, 255, 0.04);
+
+  /* Fonts */
+  --font-logo: "Orbitron", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "PT Mono", monospace;
 }
 
+/* ===============================
+   BASE STYLES
+================================ */
 body {
   margin: 0;
-  font-family: "PT Mono", monospace !important;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(15, 15, 15), rgb(0, 0, 0));
+  color: var(--color-text-main);
 
+  background: radial-gradient(circle at top,
+      #111317 0%,
+      #0b0d0f 40%,
+      #060708 100%);
 }
 
+/* ===============================
+   UTILITIES
+================================ */
+@layer utilities {
+
+  /* GRID */
+  .grid-bg,
+  .bg-grid-hero {
+    background-color: var(--color-bg-main);
+    background-image:
+      linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* BUTTON */
+  .btn-primary {
+    background: var(--color-bg-panel);
+    border: 1px solid var(--color-neon-500);
+    padding: 1rem 2.5rem;
+    color: white;
+    letter-spacing: 0.15em;
+    transition: all 0.25s ease;
+  }
+
+  .btn-primary-hover:hover {
+    background: var(--color-neon-500);
+    color: black;
+  }
+
+  /* EFFECTS */
+  .neon-glow {
+    box-shadow: 0 0 20px var(--color-neon-500);
+  }
+
+  .neon-ring {
+    box-shadow:
+      0 0 0 2px rgba(182, 255, 0, 0.3),
+      0 0 40px rgba(182, 255, 0, 0.25);
+  }
+
+  .test-border {
+    border: 2px solid white;
+  }
+}
