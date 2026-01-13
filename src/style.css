@@ -1,6 +1,7 @@
 :root {
   /* Theme variables — Teal theme (Option A) */
-  --primary: #0FA3B1;
+  /* --primary: #0FA3B1; */
+  --primary: #b6ff00;
   /* main accent */
   --primary-2: #05668D;
   /* darker accent for hovers/shadows */
