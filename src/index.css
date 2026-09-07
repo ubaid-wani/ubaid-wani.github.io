@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a09;
+  --bg-elev: #121210;
+  --card: rgba(22, 22, 19, 0.45);
+  --card-hover: rgba(26, 26, 22, 0.7);
+  --fg: #f0ebe1;
+  --fg-muted: #8a8678;
+  --fg-dim: #5a5750;
+  --border: rgba(240, 235, 225, 0.08);
+  --border-strong: rgba(240, 235, 225, 0.18);
+  --accent: #d4ff3a;
+  --accent-ink: #0a0a09;
+  --grid-line: rgba(240, 235, 225, 0.035);
+  --glow: rgba(212, 255, 58, 0.09);
+  --selection: rgba(212, 255, 58, 0.25);
+  --nav-bg: rgba(10, 10, 9, 0.75);
+  --grain-opacity: 0.055;
+  --grain-blend: overlay;
+}
+
+:root[data-theme="light"] {
+  --bg: #f3eee2;
+  --bg-elev: #ebe5d6;
+  --card: rgba(0, 0, 0, 0.035);
+  --card-hover: rgba(0, 0, 0, 0.07);
+  --fg: #1a1812;
+  --fg-muted: #6b6557;
+  --fg-dim: #a39e90;
+  --border: rgba(26, 24, 18, 0.09);
+  --border-strong: rgba(26, 24, 18, 0.18);
+  --accent: #2d4a00;
+  --accent-ink: #f3eee2;
+  --grid-line: rgba(26, 24, 18, 0.045);
+  --glow: rgba(45, 74, 0, 0.06);
+  --selection: rgba(45, 74, 0, 0.18);
+  --nav-bg: rgba(243, 238, 226, 0.82);
+  --grain-opacity: 0.075;
+  --grain-blend: multiply;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--selection);
+    color: var(--fg);
+  }
+}
+
+/* Custom Typography Utilities */
+.font-serif-italic {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Film Grain Overlay */
+.grain-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Technical Grid System */
+.grid-bg-pattern {
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.grid-mask-radial {
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 20%, black 15%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 20%, black 15%, transparent 80%);
+}
+
+.grid-mask-hero {
+  mask-image: radial-gradient(ellipse 100% 80% at 40% 40%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 80% at 40% 40%, black 20%, transparent 100%);
+}
+
+/* Custom Technical Borders & Lines */
+.hairline-border {
+  border: 1px solid var(--border);
+}
+
+.hairline-border-strong {
+  border: 1px solid var(--border-strong);
+}
+
+.hairline-border-t {
+  border-top: 1px solid var(--border);
+}
+
+.hairline-border-b {
+  border-bottom: 1px solid var(--border);
+}
+
+.hairline-border-y {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.hairline-divider {
+  background: linear-gradient(90deg, transparent, var(--border-strong) 20%, var(--border-strong) 80%, transparent);
+  height: 1px;
+}
+
+/* Subtle Accent Glow */
+.glow-accent {
+  background: radial-gradient(circle 320px at 50% 40%, var(--glow), transparent 75%);
+}
+
+/* Custom Interactive Hover Animations */
+.tech-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tech-card:hover {
+  background-color: var(--card-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.project-row {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-row:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive adjustments */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .tech-card, .project-row::after {
+    transition: none !important;
+  }
+}
