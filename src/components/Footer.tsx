@@ -18,8 +18,7 @@ export const Footer: React.FC = () => {
           className="flex items-center gap-1.5 text-[var(--fg-dim)] hover:text-[var(--fg)] transition-colors"
           aria-label="Back to top"
         >
-          Back to top <ArrowUp className="w-3 h-3" />
-        </button>
+          Back to top <ArrowUp className="w-3 h-3" /></button>
       </div>
     </footer>
   );
